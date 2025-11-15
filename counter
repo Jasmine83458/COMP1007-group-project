@@ -1,0 +1,10 @@
+score = 0
+
+if ball.rect().colliderect(paddle.rect):
+    score += 1
+
+#  when restarting after game over
+if event.type == pygame.KEYDOWN and event.key == pygame.K_r and game_over:
+    score = 0
+
+draw_text(screen, f"Score: {score}", 28, 8, 8)
